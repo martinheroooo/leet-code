@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+file=$1
+commit=$(cat $file)
+
+(echo "$commit" | tr '[:upper:]' '[:lower:]') > $file
+
+npx --no -- commitlint --edit $1
