@@ -9,3 +9,4 @@ function maxSubArray(nums: number[]): number {
 
     return max;
 }
+
